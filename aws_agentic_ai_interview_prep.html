@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS Agentic AI Engineer — Interview Preparation Hub</title>
+<style>
+:root{--bg:#f5f7fb;--panel:#fff;--ink:#172033;--muted:#596579;--line:#dce3ee;--blue:#2457c5;--blue2:#eaf0ff;--green:#176b4a;--amber:#8b5700;--red:#9b3030;--shadow:0 8px 26px rgba(20,35,70,.07)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.62 Inter,Segoe UI,Arial,sans-serif}
+header{background:linear-gradient(120deg,#10264d,#2457c5);color:white;padding:42px max(22px,calc((100% - 1180px)/2)) 34px}
+header h1{font-size:clamp(28px,4vw,42px);line-height:1.12;margin:8px 0 12px}header p{max-width:850px;color:#e1eaff;margin:0}
+.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:700;color:#bcd0ff}
+.wrap{max-width:1180px;margin:auto;padding:24px 20px 70px;display:grid;grid-template-columns:260px minmax(0,1fr);gap:24px}
+nav{position:sticky;top:16px;align-self:start;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;max-height:calc(100vh - 32px);overflow:auto;box-shadow:var(--shadow)}
+nav strong{display:block;margin:0 0 10px}nav a{display:block;padding:6px 8px;color:#34425b;text-decoration:none;border-radius:7px;font-size:13px}nav a:hover{background:var(--blue2);color:var(--blue)}
+main{min-width:0}.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:22px;margin:0 0 18px;box-shadow:var(--shadow)}
+h2{font-size:24px;margin:0 0 14px;line-height:1.25}h3{font-size:18px;margin:22px 0 8px}h4{font-size:15px;margin:15px 0 5px}
+p{margin:8px 0}ul,ol{padding-left:22px}li{margin:5px 0}.muted{color:var(--muted)}.tag{display:inline-block;background:var(--blue2);color:#244b9b;padding:3px 9px;border-radius:30px;font-size:12px;font-weight:700;margin:3px 4px 3px 0}
+.callout{border-left:4px solid var(--blue);background:#f1f5ff;padding:12px 15px;border-radius:8px;margin:13px 0}.warn{border-left-color:#d08a19;background:#fff7e8}.good{border-left-color:#23845d;background:#effaf4}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:14px}th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}th{background:#f0f3f9}
+code,pre{font-family:Consolas,monospace}code{background:#eef1f6;padding:2px 5px;border-radius:4px;font-size:.92em}pre{background:#111c30;color:#e7efff;padding:15px;border-radius:10px;overflow:auto;font-size:13px;line-height:1.55}
+details{border:1px solid var(--line);border-radius:9px;padding:11px 13px;margin:9px 0;background:#fff}summary{font-weight:700;cursor:pointer}details p{margin-top:10px}
+.progress{height:8px;background:#e5eaf2;border-radius:8px;overflow:hidden}.progress span{display:block;height:100%;width:0;background:#2b65d8}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.toolbar input{flex:1;min-width:190px;padding:10px 12px;border:1px solid #bfcadd;border-radius:8px;font:inherit}
+button{border:0;background:var(--blue);color:white;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}button.secondary{background:#e9eef8;color:#263a62}
+.question{border-bottom:1px solid var(--line);padding:12px 0}.question:last-child{border:0}
+.pill{font-size:11px;padding:2px 7px;border-radius:20px;background:#edf1f7;color:#4d5c72}
+footer{max-width:1180px;margin:auto;padding:0 20px 35px;color:var(--muted);font-size:13px}
+@media(max-width:850px){.wrap{grid-template-columns:1fr}nav{position:relative;top:auto;max-height:none;display:grid;grid-template-columns:1fr 1fr;gap:2px}nav strong{grid-column:1/-1}}
+@media print{body{background:white}.wrap{display:block}nav,.toolbar,button{display:none}.card{box-shadow:none;break-inside:avoid}header{background:#17376e!important;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<header>
+<div class="eyebrow">Personalized technical interview workbook</div>
+<h1>AWS Agentic AI Engineer<br>Interview Preparation Hub</h1>
+<p>Role-focused preparation for Amazon Bedrock, AgentCore, Strands Agents, RAG, MCP, multi-agent orchestration, serverless integration, responsible AI, and your three featured projects.</p>
+<div class="toolbar">
+<input id="search" placeholder="Search topics, services, questions…" aria-label="Search preparation material">
+<button onclick="window.print()">Print / Save as PDF</button>
+</div>
+</header>
+<div class="wrap">
+<nav>
+<strong>Study navigation</strong>
+<a href="#strategy">1. Preparation strategy</a><a href="#fit">2. JD–resume gap analysis</a>
+<a href="#bedrock">3. Bedrock ecosystem</a><a href="#strands">4. Strands & AgentCore</a>
+<a href="#agents">5. Multi-agent systems</a><a href="#rag">6. RAG engineering</a>
+<a href="#mcp">7. MCP & tool calling</a><a href="#aws">8. AWS architecture</a>
+<a href="#security">9. Security & responsible AI</a><a href="#mlops">10. SageMaker & MLOps</a>
+<a href="#services">11. Additional AWS AI services</a><a href="#projects">12. Project deep dives</a>
+<a href="#design">13. System-design scenarios</a><a href="#python">14. Python & coding</a>
+<a href="#questions">15. Interview question bank</a><a href="#answers">16. Spoken answer frameworks</a>
+<a href="#plan">17. Study plan & checklist</a>
+</nav>
+<main>
+<section class="card" id="strategy">
+<h2>1. How to prepare for this role</h2>
+<p>The job description is not simply asking for someone who can call an LLM. It expects an engineer who can design an agentic application, connect it to enterprise systems, control its actions, evaluate its quality, and operate it securely.</p>
+<div class="callout good"><b>Recommended priority:</b> Bedrock fundamentals → Strands/AgentCore → agent orchestration and MCP → RAG → AWS integration and security → project explanations → MLOps and additional AI services.</div>
+<table><tr><th>Priority</th><th>Topics</th><th>What you should be able to do</th></tr>
+<tr><td>Critical</td><td>Bedrock, Agents, Knowledge Bases, Guardrails, Strands, AgentCore</td><td>Explain components, execution flow, trade-offs, and when to use each.</td></tr>
+<tr><td>Critical</td><td>RAG, multi-agent design, MCP, tool calling, HITL</td><td>Draw architecture and explain failure handling, evaluation, and traceability.</td></tr>
+<tr><td>High</td><td>Lambda, Step Functions, EventBridge, API Gateway, S3, DynamoDB, OpenSearch</td><td>Choose services for synchronous, asynchronous, and stateful workflows.</td></tr>
+<tr><td>High</td><td>IAM, KMS, VPC, logging, guardrails</td><td>Explain least privilege, encryption, data isolation, and auditability.</td></tr>
+<tr><td>Medium</td><td>SageMaker, MLOps, Textract, Rekognition, Comprehend, Amazon Q</td><td>Explain core use cases and an end-to-end integration at a conceptual level.</td></tr>
+</table>
+<p><b>Interview rule:</b> For every technology on your resume, be ready to say whether you implemented it hands-on, designed it, tested it in a project, or understand it conceptually. Do not present conceptual familiarity as production experience.</p>
+</section>
+
+<section class="card" id="fit">
+<h2>2. JD–resume match and areas to close</h2>
+<table><tr><th>Job requirement</th><th>Evidence in your resume</th><th>Preparation focus</th></tr>
+<tr><td>RAG / Knowledge Bases / vector search</td><td>Enterprise Knowledge Intelligence Assistant: Bedrock Knowledge Bases, Titan Embeddings V2, OpenSearch Serverless, metadata retrieval, citations, abstention, evaluation.</td><td>Be precise about ingestion, chunking, retrieval, filtering, top-K, scoring, citations, and evaluation metrics.</td></tr>
+<tr><td>Multi-agent orchestration / HITL</td><td>Insurance claims LangGraph workflow with Document, Fraud, Coverage, Settlement nodes and HITL checkpoints.</td><td>Explain why separate agents/nodes exist, state schema, transitions, retries, human approval, and audit trail.</td></tr>
+<tr><td>Lambda / S3 / DynamoDB / Textract</td><td>Invoice processing project.</td><td>Explain event trigger, idempotency, extraction validation, schema normalization, retries, and persistence.</td></tr>
+<tr><td>Strands, AgentCore, MCP</td><td>Listed in skills / role requirements, but project evidence is not detailed in the supplied resume.</td><td>Prepare architecture-level explanations and clearly distinguish hands-on work from learning or prototypes.</td></tr>
+<tr><td>Step Functions / EventBridge / API Gateway / KMS</td><td>Some related AWS experience appears in your broader portfolio architecture, but the resume does not describe every service in detail.</td><td>Learn service boundaries, orchestration choices, IAM permissions, encryption, and operational patterns.</td></tr>
+<tr><td>SageMaker / MLOps / Rekognition / Comprehend / Amazon Q</td><td>Listed as desired skills, with limited project evidence in the supplied resume.</td><td>Know the purpose, typical pipeline, deployment path, and integration pattern. Do not claim production implementation unless accurate.</td></tr>
+</table>
+<div class="callout warn"><b>Resume consistency check:</b> Your resume says “4+ years” of Agentic AI experience and lists broad leadership responsibilities. Interviewers may ask for dates, team size, design decisions, code ownership, and production scale. Be ready to explain the exact scope truthfully. Your earlier engineering and data roles should not be described as four years of Agentic AI work unless that is genuinely supported.</div>
+<h3>Likely probing questions</h3>
+<ul><li>Which parts of the architecture did you personally design and code?</li><li>Was the solution deployed for external users, internally, or built as a portfolio project?</li><li>What was the real traffic, document volume, latency, and failure rate?</li><li>How did you measure retrieval quality and answer correctness?</li><li>Why use LangGraph, Strands, Bedrock Agents, or Step Functions in a given situation?</li></ul>
+</section>
+
+<section class="card" id="bedrock">
+<h2>3. Amazon Bedrock ecosystem</h2>
+<h3>What Amazon Bedrock provides</h3>
+<p>Amazon Bedrock is a managed service for accessing foundation models and building generative AI applications through AWS APIs. It reduces the need to host and operate model-serving infrastructure yourself. It provides model access plus application-building capabilities such as Knowledge Bases, Guardrails, Agents, evaluation, and related tooling.</p>
+<h3>Core components</h3>
+<table><tr><th>Component</th><th>Purpose</th><th>Interview explanation</th></tr>
+<tr><td>Foundation Models</td><td>Text, embedding, image, and other model capabilities from supported providers.</td><td>Choose based on quality, latency, context window, modality, region availability, throughput, and cost.</td></tr>
+<tr><td>Bedrock Runtime / Converse API</td><td>Invoke models using APIs.</td><td>Use the Converse interface for a consistent message-oriented interaction where supported; use model-specific APIs when specialized features are needed.</td></tr>
+<tr><td>Knowledge Bases</td><td>Managed RAG workflow for connecting data sources, indexing, retrieval, and grounded generation.</td><td>It simplifies common RAG plumbing, but retrieval quality still depends on source quality, chunking, metadata, embeddings, and evaluation.</td></tr>
+<tr><td>Agents</td><td>Managed agent capability that interprets a request, plans steps, and invokes configured action groups or knowledge sources.</td><td>Useful when managed orchestration and action-group integration fit; compare with custom orchestration for control and complex state.</td></tr>
+<tr><td>Action Groups</td><td>Expose API operations or functions to an Agent, commonly through an API schema and Lambda integration.</td><td>Define narrow, validated operations. The backend must authorize and validate every action.</td></tr>
+<tr><td>Guardrails</td><td>Apply configured controls to model inputs and outputs, including supported content and policy filters.</td><td>Guardrails are one layer, not a replacement for application authorization, input validation, or security controls.</td></tr>
+<tr><td>Model Evaluation</td><td>Support evaluation workflows for model performance and quality.</td><td>Use representative datasets and task-specific metrics; do not rely on a few manual prompts.</td></tr>
+</table>
+<h3>Bedrock Agent execution flow</h3>
+<ol><li>User sends a request to the application.</li><li>Application invokes the Agent runtime with the user/session context.</li><li>The Agent interprets the request and determines whether it needs knowledge retrieval or an action.</li><li>For an action, the Agent selects an Action Group operation and passes structured parameters.</li><li>The configured Lambda or API executes validated business logic and returns a structured result.</li><li>The Agent uses the result to formulate a response; the application records trace and outcome data.</li></ol>
+<div class="callout"><b>Important distinction:</b> An Agent deciding to call a tool does not mean the tool call is automatically safe. Your service must authenticate the caller, authorize the operation, validate parameters, enforce business rules, and log the outcome.</div>
+<h3>Bedrock Agent vs custom LangGraph/Strands orchestration</h3>
+<table><tr><th>Choose managed Bedrock Agents when…</th><th>Choose custom orchestration when…</th></tr><tr><td>You want a managed agent abstraction, action groups, and Bedrock-native integration.</td><td>You need precise state transitions, custom routing, complex loops, deterministic control, or framework flexibility.</td></tr><tr><td>The workflow maps well to the managed agent lifecycle.</td><td>The workflow has many domain-specific stages, explicit checkpoints, or advanced recovery logic.</td></tr></table>
+</section>
+
+<section class="card" id="strands">
+<h2>4. Strands Agents and Amazon Bedrock AgentCore</h2>
+<h3>Strands Agents</h3>
+<p>Strands Agents is an open-source SDK approach for building agents around a model, instructions, and tools. It is designed to make tool-using agent development straightforward while allowing developers to extend behavior with their own tools and integrations. It is a framework/SDK, not the same thing as a managed Bedrock Agent.</p>
+<ul><li><b>Model:</b> the LLM that interprets the request and decides whether to use tools.</li><li><b>System prompt/instructions:</b> defines role, boundaries, and expected behavior.</li><li><b>Tools:</b> functions the agent can invoke, with schemas and implementation code.</li><li><b>Agent loop:</b> model response → tool selection → tool execution → tool result → model response, until completion or a stopping condition.</li></ul>
+<p>Prepare to explain tool schemas, tool output formats, error handling, maximum iterations, timeouts, and how you prevent the model from inventing tool results.</p>
+<h3>AgentCore: understand it as an agent deployment/runtime platform</h3>
+<p>Amazon Bedrock AgentCore is a set of capabilities intended to help build, deploy, operate, and govern agents. Its capabilities have evolved, so check the current AWS documentation for exact component names and regional availability before an interview.</p>
+<table><tr><th>Capability area</th><th>What to understand</th></tr>
+<tr><td>Runtime</td><td>Run agent workloads in a managed environment with attention to isolation, scaling, and session behavior.</td></tr>
+<tr><td>Gateway</td><td>Expose tools and services through a controlled interface; understand authentication and tool discovery.</td></tr>
+<tr><td>Identity</td><td>Manage agent access to resources and delegated credentials securely.</td></tr>
+<tr><td>Memory</td><td>Support useful context across interactions; decide what should be retained and for how long.</td></tr>
+<tr><td>Observability</td><td>Trace agent steps, tool calls, latency, errors, and outcomes.</td></tr>
+<tr><td>Evaluations / policy controls</td><td>Measure agent quality and enforce appropriate operational boundaries where supported.</td></tr>
+</table>
+<div class="callout warn"><b>Do not mix these terms:</b> Bedrock Agents is a managed agent-building capability. Strands is an agent SDK/framework. AgentCore is a platform of agent infrastructure capabilities. They solve related but different parts of the lifecycle.</div>
+<h3>Sample interview answer</h3>
+<p>“I see Strands as the developer framework for defining an agent and its tools, while AgentCore addresses the infrastructure needed to operate agents more reliably, such as runtime, identity, gateway, memory, and observability capabilities. Bedrock Agents is another managed option, especially when its action-group and knowledge-base workflow fits the use case. I would select based on the level of orchestration control, operational requirements, and integration constraints.”</p>
+</section>
+
+<section class="card" id="agents">
+<h2>5. Multi-agent architecture and orchestration</h2>
+<p>A multi-agent system separates a complex task into bounded responsibilities. The design should improve control or quality enough to justify extra model calls, latency, cost, and failure modes.</p>
+<h3>Common patterns</h3>
+<ul><li><b>Supervisor–worker:</b> a supervisor routes subtasks to specialist agents and combines results.</li><li><b>Sequential pipeline:</b> each stage consumes the previous stage's output.</li><li><b>Parallel fan-out/fan-in:</b> independent specialists work in parallel; a coordinator aggregates results.</li><li><b>Hierarchical:</b> a coordinator delegates to sub-coordinators and specialist agents.</li><li><b>Human approval:</b> sensitive or high-impact actions pause for human review.</li></ul>
+<h3>Insurance claims example — explain the workflow</h3>
+<pre>User / Claims API
+       |
+       v
+Input validation + claim context
+       |
+       v
+Supervisor / LangGraph workflow
+  |       |        |          |
+  v       v        v          v
+Document Fraud   Coverage  Policy/PAS lookup
+Agent     Agent  Agent
+  |       |        |
+  +-------+--------+
+          |
+          v
+  Settlement assessment
+          |
+     Decision gate
+      /       \\
+ low risk    exception / high impact
+    |              |
+ auto recommendation  Human review
+      \\             /
+       v           v
+        Auditable claim outcome
+</pre>
+<p><b>Be clear about the boundary:</b> an LLM can extract, classify, summarize, and recommend. Deterministic business rules and authorized core-system services should control coverage calculations, eligibility, payment limits, and final approvals. Human review should remain for defined high-risk cases.</p>
+<h3>State and recovery design</h3>
+<ul><li>Use a typed, explicit state object: claim ID, document status, fraud indicators, coverage result, decision, approvals, errors, and trace ID.</li><li>Make nodes idempotent where possible. Repeating a node should not create duplicate payments or duplicate records.</li><li>Set bounded retries for transient failures; use exponential backoff with jitter where appropriate.</li><li>Do not retry permanent errors such as invalid input or denied authorization.</li><li>Persist checkpoints before and after critical stages; support safe resume from a known state.</li><li>Use a dead-letter or exception path for exhausted retries and alert an operator.</li><li>Record who approved an action, what evidence they saw, and what changed.</li></ul>
+<h3>How to answer “Why not one agent?”</h3>
+<p>“A single agent can be simpler and cheaper, so I would start there if the task is straightforward. I would split into specialists when responsibilities need different instructions, tools, access permissions, evaluation criteria, or independent failure handling. The supervisor coordinates them, while deterministic services enforce business rules. I would monitor whether the decomposition actually improves accuracy and maintainability enough to justify extra latency and cost.”</p>
+</section>
+
+<section class="card" id="rag">
+<h2>6. RAG engineering — from ingestion to evaluation</h2>
+<h3>End-to-end RAG pipeline</h3>
+<pre>Source documents
+  -> parsing / OCR
+  -> cleaning and normalization
+  -> chunking + metadata
+  -> embedding model
+  -> vector index (and optional lexical index)
+
+User question
+  -> authentication + query validation
+  -> query rewrite / expansion (if justified)
+  -> embedding
+  -> vector / hybrid retrieval
+  -> metadata + access-control filtering
+  -> reranking (optional)
+  -> top-K context assembly
+  -> grounded prompt + model
+  -> citation / claim validation
+  -> answer or abstention
+  -> feedback + telemetry</pre>
+<h3>Key concepts</h3>
+<table><tr><th>Concept</th><th>Practical explanation</th></tr>
+<tr><td>Chunking</td><td>Split documents into retrieval units. Respect headings, sections, tables, and semantic boundaries; avoid arbitrary splits that separate a question from its answer.</td></tr>
+<tr><td>Overlap</td><td>Small overlap can preserve context across chunk boundaries, but excessive overlap adds duplicate retrieval and cost.</td></tr>
+<tr><td>Embeddings</td><td>Dense numerical representations that place semantically related text near one another in vector space.</td></tr>
+<tr><td>Vector search</td><td>Find semantically similar chunks by vector distance/similarity.</td></tr>
+<tr><td>Lexical search</td><td>Find exact terms, names, IDs, and rare keywords. Useful alongside semantic search.</td></tr>
+<tr><td>Hybrid search</td><td>Combine lexical and semantic retrieval, often followed by score fusion or reranking.</td></tr>
+<tr><td>Metadata filtering</td><td>Restrict retrieval by department, document type, date, tenant, or user authorization.</td></tr>
+<tr><td>Reranking</td><td>Re-score retrieved candidates against the query to improve ordering; adds compute and latency.</td></tr>
+<tr><td>Abstention</td><td>Decline to answer when evidence is missing, conflicting, or below a defined confidence/evidence threshold.</td></tr>
+</table>
+<h3>How to evaluate RAG</h3>
+<ul><li><b>Retrieval:</b> Recall@K, Precision@K, Hit Rate@K, MRR, nDCG.</li><li><b>Generation:</b> answer correctness, faithfulness/groundedness, relevance, completeness, citation correctness.</li><li><b>System:</b> latency (median/p95), error rate, token usage, cost per request, throughput.</li><li><b>Safety:</b> unauthorized retrieval rate, sensitive-data leakage, prompt-injection success rate, unsafe action rate.</li></ul>
+<p>Build a representative golden dataset with questions, expected source documents or passages, expected answer facts, and cases that should be refused. Keep a held-out set to avoid tuning only to the examples used during development.</p>
+<h3>Your Enterprise Knowledge Assistant — metrics to explain</h3>
+<p>Your project notes report a 30-question retrieval set with 100% document Hit/Recall, MRR 0.9444, and Top-1 90%. They also report a Top-K comparison where K=3 reduced estimated inference cost by about 21% compared with K=5 while preserving the reported document Hit/Recall on that test set.</p>
+<div class="callout warn"><b>Qualify the result:</b> say “on our 30-question evaluation set,” not “100% recall in production.” Explain dataset size, relevance labels, how recall was calculated, and what the metric does not prove. A small evaluation set is useful evidence, not a universal guarantee.</div>
+<h3>Common RAG failure modes</h3>
+<ul><li>Wrong or incomplete source parsing → improve OCR, table extraction, and document validation.</li><li>Relevant passage not retrieved → inspect chunk boundaries, query wording, embeddings, filters, and top-K.</li><li>Correct passage ranked too low → hybrid retrieval or reranking.</li><li>Answer unsupported by context → stronger grounding instructions, evidence checks, abstention, and citation validation.</li><li>Cross-tenant leakage → enforce authorization filters outside the model and test adversarially.</li></ul>
+</section>
+
+<section class="card" id="mcp">
+<h2>7. MCP, tool calling, and function calling</h2>
+<h3>What MCP is</h3>
+<p>The Model Context Protocol (MCP) is an open protocol for connecting AI applications to external tools and context providers through a standard interface. It helps separate the agent/client from the implementation of a tool server.</p>
+<ul><li><b>MCP host:</b> the AI application that contains or coordinates the model experience.</li><li><b>MCP client:</b> the protocol client that connects to an MCP server.</li><li><b>MCP server:</b> exposes capabilities such as tools, resources, or prompts.</li><li><b>Tools:</b> callable operations with defined input schemas and results.</li><li><b>Resources:</b> data/context exposed for the client to read.</li></ul>
+<h3>MCP vs direct function calling</h3>
+<table><tr><th>Direct function/tool calling</th><th>MCP</th></tr><tr><td>Application defines and integrates tool schemas and implementations directly.</td><td>Standardized protocol for discovering and invoking capabilities from MCP servers.</td></tr><tr><td>Simple for a small, fixed set of tools in one application.</td><td>Useful when tools should be reusable across compatible clients and servers.</td></tr><tr><td>Application owns most integration conventions.</td><td>Protocol standardizes communication, but authentication, authorization, validation, and governance are still required.</td></tr></table>
+<h3>Tool security checklist</h3>
+<ul><li>Use allow-listed tools; do not let model text become arbitrary shell, SQL, or URL execution.</li><li>Validate input against a strict schema and enforce business constraints in code.</li><li>Authenticate the user and authorize each tool operation using least privilege.</li><li>Separate read-only tools from write or financial actions.</li><li>Require human confirmation for high-impact or irreversible operations.</li><li>Set timeouts, rate limits, payload limits, and bounded retries.</li><li>Log caller, tool name, validated arguments, result status, and trace ID while avoiding secrets and unnecessary personal data.</li></ul>
+<h3>Example</h3>
+<pre>Tool: get_claim_status
+Input:
+{
+  "claim_id": "CLM-2048"
+}
+Server-side controls:
+1. Validate claim_id format.
+2. Verify caller identity.
+3. Check caller is allowed to access this claim.
+4. Query the claims service.
+5. Return a limited structured result.
+6. Record audit metadata.</pre>
+</section>
+
+<section class="card" id="aws">
+<h2>8. AWS architecture and service selection</h2>
+<table><tr><th>Service</th><th>Use it for</th><th>Design point</th></tr>
+<tr><td>API Gateway</td><td>Expose authenticated HTTP APIs.</td><td>Authentication/authorization, throttling, request validation, API versioning, and integration boundaries.</td></tr>
+<tr><td>Lambda</td><td>Event-driven or short-lived serverless compute.</td><td>Stateless handlers, concurrency limits, timeout, cold starts, idempotency, and retry behavior.</td></tr>
+<tr><td>Step Functions</td><td>Orchestrate multi-step workflows.</td><td>State transitions, retries, catches, waits, parallel branches, human approval, and execution history.</td></tr>
+<tr><td>EventBridge</td><td>Route events between services.</td><td>Loose coupling, event filtering, retries, DLQs, and event schema design.</td></tr>
+<tr><td>S3</td><td>Durable object storage and document landing zone.</td><td>Versioning, lifecycle, bucket policies, encryption, event notifications, and access boundaries.</td></tr>
+<tr><td>DynamoDB</td><td>Low-latency key-value/document storage.</td><td>Access-pattern-first key design, conditional writes, TTL, partition distribution, and idempotency records.</td></tr>
+<tr><td>OpenSearch Serverless</td><td>Search and vector retrieval workloads.</td><td>Vector index configuration, filtering, capacity/cost, network policies, and relevance evaluation.</td></tr>
+<tr><td>CloudWatch</td><td>Logs, metrics, alarms, dashboards.</td><td>Structured logs, correlation IDs, latency/error metrics, and alert thresholds.</td></tr>
+<tr><td>Step Functions vs Lambda chaining</td><td>Workflow orchestration vs simple compute integration.</td><td>Use Step Functions when workflow state, branching, retries, waiting, or visibility become important.</td></tr>
+</table>
+<h3>Reference architecture: document-grounded agent assistant</h3>
+<pre>Web / enterprise client
+        |
+        v
+CloudFront (optional) -> Cognito / identity provider
+        |
+        v
+API Gateway (JWT authorizer, throttling)
+        |
+        v
+Lambda application layer
+   |         |              |
+   |         |              +--> DynamoDB (sessions / feedback)
+   |         +--> Bedrock Guardrails
+   +--> Bedrock Knowledge Base
+              |
+              +--> S3 document source
+              +--> embedding model
+              +--> OpenSearch vector index
+        |
+        v
+Bedrock model / agent orchestration
+        |
+        v
+Grounded response + citations
+        |
+        v
+CloudWatch traces, metrics, alarms</pre>
+<h3>When to use Step Functions instead of an agent loop</h3>
+<p>Use Step Functions for explicit business workflows with known stages, durable state transitions, predictable retries, waits, and human approval. Use an agent loop when the next tool or reasoning step depends on the user's request and model-driven decisions. Many enterprise systems use both: an agent proposes or selects an action, while Step Functions governs the approved business process.</p>
+</section>
+
+<section class="card" id="security">
+<h2>9. IAM, KMS, and responsible AI</h2>
+<h3>Security principles</h3>
+<ul><li><b>Least privilege:</b> grant each Lambda role or agent identity only the actions and resources it needs.</li><li><b>Separation of duties:</b> separate ingestion, retrieval, administration, and high-impact execution permissions.</li><li><b>Encryption:</b> use TLS in transit and KMS-backed encryption at rest where supported and required.</li><li><b>Network controls:</b> private connectivity and restrictive network policies where appropriate.</li><li><b>Secrets:</b> use a managed secret store; never hard-code API keys in source code or prompts.</li><li><b>Tenant isolation:</b> enforce user/tenant authorization before retrieval and before tool execution.</li><li><b>Auditability:</b> preserve trace IDs, decision evidence, tool outcomes, approvals, and model/config versions.</li></ul>
+<h3>Guardrails are not authorization</h3>
+<p>Guardrails can help filter or constrain model inputs and outputs according to configured policies. They do not prove that a user is permitted to read a document or execute a transaction. Enforce access control in the application and data layer.</p>
+<h3>Prompt injection defenses</h3>
+<ol><li>Treat retrieved documents and tool outputs as untrusted data, not system instructions.</li><li>Keep system instructions separate from retrieved content.</li><li>Restrict tool capabilities and validate every argument.</li><li>Do not expose secrets or internal prompts to the model unnecessarily.</li><li>Use allow-listed destinations and constrained network egress for tools.</li><li>Test direct and indirect prompt injection with adversarial evaluation cases.</li></ol>
+<h3>Responsible AI themes</h3>
+<p>Fairness, reliability, safety, privacy, transparency, explainability, accountability, and human oversight. Translate these into concrete controls: representative evaluation data, documented limitations, refusal behavior, appeal/escalation routes, audit logs, and human review for high-impact decisions.</p>
+</section>
+
+<section class="card" id="mlops">
+<h2>10. SageMaker and MLOps fundamentals</h2>
+<p>Be ready to distinguish a foundation-model application built on Bedrock from a custom ML lifecycle managed with SageMaker. They can complement one another.</p>
+<h3>Typical ML lifecycle</h3>
+<ol><li><b>Data preparation:</b> ingest, validate, clean, label, split, and version datasets.</li><li><b>Experimentation:</b> train models, track parameters and metrics, compare baselines.</li><li><b>Evaluation:</b> test on holdout data; assess accuracy and relevant business/safety metrics.</li><li><b>Registration:</b> store approved model artifacts and metadata in a model registry.</li><li><b>Deployment:</b> deploy to a real-time endpoint, batch transform, or another suitable inference pattern.</li><li><b>Monitoring:</b> monitor latency, errors, data quality, drift, and model performance where labels become available.</li><li><b>Retraining:</b> trigger a governed retraining process when data or performance conditions justify it.</li></ol>
+<table><tr><th>Term</th><th>Meaning</th></tr><tr><td>Training</td><td>Learn model parameters from a training dataset.</td></tr><tr><td>Inference</td><td>Use a trained model to produce predictions on new inputs.</td></tr><tr><td>Batch inference</td><td>Process a dataset in batches; useful when immediate responses are not required.</td></tr><tr><td>Online inference</td><td>Serve predictions through an endpoint for low-latency requests.</td></tr><tr><td>Data drift</td><td>Input data distribution changes compared with the reference distribution.</td></tr><tr><td>Concept drift</td><td>The relationship between inputs and target outcomes changes over time.</td></tr></table>
+<h3>Bedrock vs SageMaker — interview framing</h3>
+<p>“I would generally consider Bedrock when I want managed access to foundation models and GenAI application capabilities without managing model hosting. I would consider SageMaker when I need more control over the ML lifecycle, such as custom training, experimentation, model registry, endpoints, and monitoring. The choice depends on customization, model ownership, operational requirements, and cost.”</p>
+</section>
+
+<section class="card" id="services">
+<h2>11. Additional AWS AI services in the desired skills</h2>
+<table><tr><th>Service</th><th>Purpose</th><th>Example in an enterprise workflow</th></tr>
+<tr><td>Amazon Textract</td><td>Extract text, forms, tables, and document structure from supported documents.</td><td>Read invoices, forms, receipts, and claim documents before validation.</td></tr>
+<tr><td>Amazon Comprehend</td><td>NLP capabilities such as entity, key phrase, language, and sentiment analysis (feature availability varies).</td><td>Identify entities or classify text in customer correspondence.</td></tr>
+<tr><td>Amazon Rekognition</td><td>Image and video analysis capabilities.</td><td>Analyze image content for a defined inspection or moderation workflow.</td></tr>
+<tr><td>Amazon Q Business</td><td>Enterprise assistant experience connected to organizational information and applications.</td><td>Employee knowledge discovery with enterprise data permissions and connectors.</td></tr>
+<tr><td>Amazon SageMaker AI</td><td>Build, train, deploy, and operate custom ML models.</td><td>Custom classifier or forecasting model integrated with an application.</td></tr>
+</table>
+<h3>Invoice processing architecture</h3>
+<pre>Invoice uploaded to S3
+       |
+       v
+S3 event -> EventBridge / Lambda
+       |
+       v
+Textract extraction
+       |
+       v
+Normalize fields + validate schema
+       |
+       v
+Business rules / duplicate check
+       |
+       v
+Bedrock-assisted explanation or classification
+       |
+       v
+Human review for low confidence / mismatch
+       |
+       v
+DynamoDB record + audit status
+       |
+       v
+Notification / downstream finance system</pre>
+<p>Keep numerical calculations, tax rules, vendor matching, and payment authorization deterministic. Use the LLM for bounded interpretation or explanation, not as the final authority for financial calculations.</p>
+</section>
+
+<section class="card" id="projects">
+<h2>12. Your project deep dives</h2>
+<h3>A. Enterprise Knowledge Intelligence Assistant</h3>
+<p><span class="tag">Strongest JD alignment</span><span class="tag">Bedrock RAG</span><span class="tag">Vector search</span><span class="tag">Evaluation</span></p>
+<p><b>30-second explanation:</b> “I built a knowledge-grounded enterprise assistant using Amazon Bedrock Knowledge Bases, Titan Text Embeddings V2, OpenSearch Serverless, and Nova 2 Lite. The application retrieves relevant enterprise content, applies metadata-aware filtering, generates source-grounded answers with citations, and abstains when the indexed evidence is insufficient. I also added authentication, feedback, observability, and a repeatable evaluation process.”</p>
+<h4>Be ready to explain</h4>
+<ul><li>How documents enter S3 and are synchronized/indexed.</li><li>Why Titan Text Embeddings V2 was selected and the embedding dimension used in your implementation.</li><li>How chunking and metadata affect retrieval.</li><li>Why OpenSearch Serverless was used and what alternatives you considered.</li><li>How citations map to document/page metadata.</li><li>How the abstention message is triggered and how unsupported citations are reduced.</li><li>How you measured Hit/Recall, MRR, Top-1, answer quality, latency, and cost.</li><li>What was implemented versus what remains a portfolio/demo deployment.</li></ul>
+<h4>Likely challenge question: “Why did you use K=3 instead of K=5?”</h4>
+<p>“I compared retrieval quality and estimated inference cost on the same evaluation set. In that test, K=3 retained the measured document Hit/Recall while reducing the amount of context sent for generation and lowering estimated inference cost by roughly 21% compared with K=5. I would not assume K=3 is universally best; I would re-evaluate it as the corpus and question distribution change.”</p>
+<h4>Likely challenge question: “Does 100% recall mean the RAG system is perfect?”</h4>
+<p>“No. It means all expected relevant documents were retrieved for the evaluated questions under our definition of relevance and chosen K. It does not guarantee the generated answer is correct, that every real-world question will be covered, or that access control is flawless. That is why I evaluate retrieval, generation, citations, safety, and operational metrics separately.”</p>
+
+<h3>B. AI Insurance Claim Settlement Platform</h3>
+<p><span class="tag">Agent orchestration</span><span class="tag">HITL</span><span class="tag">Traceability</span></p>
+<p><b>30-second explanation:</b> “I designed a LangGraph workflow that separates claim processing into document verification, fraud screening, coverage assessment, and settlement assessment. The workflow passes a shared state between stages, uses deterministic checks and core-system lookups for business rules, and includes human-in-the-loop checkpoints for exceptions or decisions requiring approval. This creates a traceable execution path rather than allowing one free-form agent to make the entire decision.”</p>
+<h4>Likely follow-ups</h4>
+<ul><li>What is in the graph state? How is it validated?</li><li>What causes a transition to the fraud or human-review path?</li><li>Which decisions are LLM-assisted and which are deterministic?</li><li>How do you resume after a Lambda/API/database failure?</li><li>How do you prevent duplicate settlement or payment?</li><li>What evidence is stored for audit?</li></ul>
+<div class="callout warn"><b>Careful with “100% auditable”:</b> explain what is actually recorded—state transitions, tool calls, source evidence, timestamps, approvals, and outcome. Avoid implying that auditability guarantees correctness or regulatory compliance by itself.</div>
+
+<h3>C. AI-Powered Invoice Processing & Analysis</h3>
+<p><span class="tag">Textract</span><span class="tag">Lambda</span><span class="tag">DynamoDB</span></p>
+<p><b>30-second explanation:</b> “An invoice is uploaded to S3, which triggers a serverless workflow. Textract extracts the document fields and tables. The application normalizes and validates the extracted data, uses Bedrock for bounded AI-assisted analysis where useful, and stores structured results and processing status in DynamoDB. I account for retries, rate limits, and failures so the same invoice is not processed or recorded twice.”</p>
+<h4>Know these details</h4>
+<ul><li>How you identify invoice number, vendor, date, line items, tax, and total.</li><li>How you handle missing or low-confidence fields.</li><li>How you validate totals using deterministic calculations.</li><li>How you handle Textract asynchronous jobs for multi-page documents.</li><li>How you implement idempotency and duplicate detection.</li><li>How throttling, exponential backoff, DLQ, and replay work.</li></ul>
+</section>
+
+<section class="card" id="design">
+<h2>13. System-design scenarios to practise</h2>
+<div class="question"><b>Scenario 1: Design a secure enterprise RAG assistant for multiple departments.</b><p>Cover identity → API → authorization → department/tenant filtering → retrieval → grounded generation → citations → abstention → telemetry. Explain how you prevent unauthorized chunks from entering the model context.</p></div>
+<div class="question"><b>Scenario 2: Design an agent that can update customer records.</b><p>Use narrow tools, server-side authorization, schema validation, idempotency, confirmation for writes, audit logs, rate limits, and rollback/compensation where possible. The LLM should not have direct database credentials.</p></div>
+<div class="question"><b>Scenario 3: Design a long-running claims workflow.</b><p>Use Step Functions for durable orchestration, Lambda for bounded tasks, DynamoDB or a suitable store for business state, EventBridge for events, and human approval for exceptions. Define retries, catches, timeouts, DLQs, and resume behavior.</p></div>
+<div class="question"><b>Scenario 4: RAG quality has dropped after adding 100,000 documents.</b><p>Check ingestion failures, parsing quality, duplicate content, chunk distribution, metadata, index health, embedding consistency, query mix, retrieval recall, ranking, and latency. Compare before/after with a fixed evaluation set.</p></div>
+<div class="question"><b>Scenario 5: Agent tool calls are slow and expensive.</b><p>Measure per-step latency and token use; reduce unnecessary reasoning loops; use deterministic routing for predictable tasks; parallelize independent work; cache safe repeatable reads; limit tool payloads; select a suitable model; and set budgets/timeouts.</p></div>
+<h3>System-design answer structure</h3>
+<ol><li>Clarify users, workload, data sensitivity, and success criteria.</li><li>State functional and non-functional requirements.</li><li>Draw the high-level architecture and request flow.</li><li>Explain data model, APIs, and service responsibilities.</li><li>Cover security, privacy, and tenant isolation.</li><li>Cover failure handling, observability, and recovery.</li><li>Discuss trade-offs, cost, latency, and scaling.</li><li>Define evaluation and operational success metrics.</li></ol>
+</section>
+
+<section class="card" id="python">
+<h2>14. Python and coding preparation</h2>
+<p>For an Agentic AI Engineer role, expect practical Python around APIs, data structures, error handling, async execution, JSON, and tool implementations.</p>
+<h3>Topics to revise</h3>
+<ul><li>Lists, tuples, dictionaries, sets; mutability and copying.</li><li>Comprehensions, sorting with keys, enumerate, zip.</li><li>Functions, decorators, generators, iterators, context managers.</li><li>Classes, dataclasses, type hints, exceptions.</li><li>JSON parsing, HTTP requests, status codes, timeouts.</li><li>Async/await, concurrency limits, thread vs process basics.</li><li>Logging, unit tests, mocks, dependency injection.</li></ul>
+<h3>Example: count words</h3>
+<pre>def word_counts(text: str) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for word in text.lower().split():
+        counts[word] = counts.get(word, 0) + 1
+    return counts
+
+print(word_counts("RAG agent RAG"))
+# {'rag': 2, 'agent': 1}</pre>
+<h3>Example: safe tool wrapper</h3>
+<pre>from typing import Any
+
+def get_invoice(invoice_id: str, service: Any) -> dict:
+    if not invoice_id or not invoice_id.startswith("INV-"):
+        raise ValueError("Invalid invoice ID")
+
+    # Authorization must be checked using the
+    # authenticated caller context before this call.
+    result = service.fetch_invoice(invoice_id)
+
+    if result is None:
+        return {"status": "not_found"}
+
+    return {
+        "status": "ok",
+        "invoice_id": result["invoice_id"],
+        "amount": result["amount"],
+    }</pre>
+<h3>Practice problems</h3>
+<ul><li>Two Sum; reverse words in a sentence; first non-repeating character.</li><li>Find duplicates; group anagrams; merge intervals.</li><li>Flatten nested JSON; validate required keys and types.</li><li>Implement retry with a maximum attempt count and exponential backoff.</li><li>Write a function that removes duplicate events using an idempotency key.</li></ul>
+</section>
+
+<section class="card" id="questions">
+<h2>15. Interview question bank</h2>
+<p class="muted">Open each question to reveal the answer points. Practise speaking the answer before opening it.</p>
+<div id="questionBank">
+<div class="question"><details><summary>1. What is the difference between RAG and fine-tuning?</summary><p>RAG retrieves external knowledge at query time and supplies it as context. Fine-tuning changes model parameters using training examples. RAG is often better for frequently changing or source-cited knowledge; fine-tuning is useful for behavior, style, or task adaptation. They can be combined.</p></details></div>
+<div class="question"><details><summary>2. What happens when an agent calls a tool?</summary><p>The model returns a structured tool request. The application validates the tool name and arguments, checks authorization, executes the function, captures the result or error, and returns a structured tool result to the model. The model then continues or completes. The application controls limits and permissions.</p></details></div>
+<div class="question"><details><summary>3. What is the difference between LangChain and LangGraph?</summary><p>LangChain provides components and abstractions for LLM applications, tools, retrieval, and chains. LangGraph focuses on stateful graph-based orchestration with nodes, edges, conditional routing, cycles, checkpointing, and human-in-the-loop patterns. They can be used together.</p></details></div>
+<div class="question"><details><summary>4. What is the difference between an agent and a workflow?</summary><p>A workflow follows predefined steps and transitions. An agent uses a model to select actions or tools based on context. Use workflows for predictable, regulated processes; use agents where flexible interpretation or dynamic tool selection adds value. A robust system often combines both.</p></details></div>
+<div class="question"><details><summary>5. What is a Bedrock Knowledge Base?</summary><p>A managed capability that connects supported data sources to an indexing and retrieval workflow for RAG. It can handle ingestion, embeddings, vector storage integration, retrieval, and grounded generation features depending on configuration. It does not remove the need to evaluate relevance, permissions, and answer quality.</p></details></div>
+<div class="question"><details><summary>6. What is an Action Group?</summary><p>A set of actions exposed to a Bedrock Agent, commonly described with an API schema and implemented through Lambda or an API integration. The action implementation must validate inputs and enforce authorization and business rules.</p></details></div>
+<div class="question"><details><summary>7. What is the purpose of AgentCore?</summary><p>It provides infrastructure capabilities for deploying and operating agents, with areas such as runtime, gateway, identity, memory, and observability. Explain the specific capabilities relevant to the architecture and verify current service details against AWS documentation.</p></details></div>
+<div class="question"><details><summary>8. What is Strands Agents?</summary><p>An open-source SDK/framework for building model-driven agents using instructions and tools. The agent loop lets the model choose a tool, the runtime executes it, and the result is returned for the model to continue. It is distinct from a managed Bedrock Agent.</p></details></div>
+<div class="question"><details><summary>9. How do you reduce hallucinations in RAG?</summary><p>Improve source quality and retrieval; use metadata filters and reranking; constrain generation to supplied evidence; require citations; validate citation support; use an abstention threshold; and evaluate with answerable and unanswerable questions. No single prompt guarantees zero hallucinations.</p></details></div>
+<div class="question"><details><summary>10. What is the difference between Precision@K and Recall@K?</summary><p>Precision@K measures how many of the retrieved top-K results are relevant. Recall@K measures how many of all known relevant items were retrieved in the top K. Precision rewards fewer irrelevant results; recall rewards finding the relevant evidence.</p></details></div>
+<div class="question"><details><summary>11. What is MRR?</summary><p>Mean Reciprocal Rank averages 1 divided by the rank of the first relevant result across queries. A relevant result at rank 1 contributes 1.0; at rank 2 contributes 0.5. It measures how early the first relevant result appears.</p></details></div>
+<div class="question"><details><summary>12. Why use hybrid search?</summary><p>Dense retrieval captures semantic similarity; lexical search captures exact terms and rare keywords. Hybrid search combines both, which can improve coverage for enterprise content containing IDs, product names, policy terms, and natural-language questions. It must be measured on the target corpus.</p></details></div>
+<div class="question"><details><summary>13. How do you handle a failed tool call?</summary><p>Classify the failure as transient, permanent, authorization-related, or business-rule-related. Retry only transient failures with bounded exponential backoff; validate inputs; return structured errors; checkpoint state; and escalate exhausted or high-risk failures. Never blindly repeat a non-idempotent action.</p></details></div>
+<div class="question"><details><summary>14. What is idempotency?</summary><p>Repeated execution with the same logical request produces the same intended outcome without duplicating side effects. Use an idempotency key and conditional writes or transaction controls, and persist the processing result so retries can safely return the prior outcome.</p></details></div>
+<div class="question"><details><summary>15. Lambda or Step Functions?</summary><p>Lambda runs a unit of compute. Step Functions coordinates a workflow across tasks and states, with branching, retries, waits, catches, and execution history. A Lambda can be a task inside a Step Functions workflow.</p></details></div>
+<div class="question"><details><summary>16. EventBridge or SQS?</summary><p>EventBridge is an event bus for routing events to targets using rules and event patterns. SQS is a message queue that buffers work and decouples producers and consumers. They can be combined; choose based on routing versus queueing and consumer-processing needs.</p></details></div>
+<div class="question"><details><summary>17. How do you secure an agent?</summary><p>Authenticate users, authorize every operation, grant least-privilege tool permissions, validate arguments, isolate tenants, encrypt data, protect secrets, constrain network access, add human approval for risky actions, and log tool calls and decisions.</p></details></div>
+<div class="question"><details><summary>18. What is prompt injection?</summary><p>An attacker attempts to make the model ignore intended instructions or misuse retrieved content/tools. Defenses include treating external content as untrusted, separating instructions and data, restricting tools, enforcing authorization in code, and testing indirect prompt injection.</p></details></div>
+<div class="question"><details><summary>19. How would you monitor an agent in production?</summary><p>Track end-to-end and per-step latency, token use, cost, model and prompt versions, tool calls, success/error rates, retries, user feedback, retrieval metrics, groundedness, and safety events. Use correlation IDs and avoid logging sensitive content unnecessarily.</p></details></div>
+<div class="question"><details><summary>20. How do you choose an LLM?</summary><p>Evaluate quality on representative tasks, latency, cost, context window, tool-use reliability, structured output, language needs, safety, availability, throughput, and deployment constraints. Run a controlled evaluation rather than choosing only by benchmark reputation.</p></details></div>
+<div class="question"><details><summary>21. What is human-in-the-loop?</summary><p>A workflow pauses for a human to review, approve, reject, or correct a result before continuing. Define clear triggers, present evidence and proposed action, record reviewer identity and decision, and support timeout/escalation.</p></details></div>
+<div class="question"><details><summary>22. What is the difference between data drift and concept drift?</summary><p>Data drift is a change in the input distribution. Concept drift is a change in the relationship between inputs and target outcomes. Both can reduce model performance and require monitoring and investigation.</p></details></div>
+<div class="question"><details><summary>23. How do you process a large multi-page invoice?</summary><p>Store it in S3, start an asynchronous Textract job, track job status, collect results, normalize fields, validate totals and required fields, route uncertain cases to review, persist results, and use idempotency and DLQ/replay controls.</p></details></div>
+<div class="question"><details><summary>24. Why not let the LLM directly query the database?</summary><p>Direct unrestricted access creates security, data leakage, correctness, and audit risks. Expose narrow parameterized tools or approved query templates, enforce user authorization, validate inputs, limit returned fields, and log execution.</p></details></div>
+<div class="question"><details><summary>25. How do you reduce agent latency?</summary><p>Profile each step, reduce unnecessary agent loops, choose an appropriately sized model, shorten prompts and tool payloads, parallelize independent calls, cache safe repeatable reads, avoid redundant retrieval, and set timeouts and budgets. Measure p50 and p95 before and after.</p></details></div>
+</div>
+</section>
+
+<section class="card" id="answers">
+<h2>16. Spoken answer frameworks</h2>
+<h3>Self-introduction — adapt to facts you can defend</h3>
+<p>“Hi, I’m Ajam Teli. My recent work has focused on Generative AI and agentic application development, particularly RAG systems, tool integrations, and workflow orchestration. I have worked with Python, LangChain, LangGraph, and AWS services including Amazon Bedrock, Knowledge Bases, Lambda, S3, DynamoDB, and OpenSearch. One project I can explain in detail is an enterprise knowledge assistant where I worked on retrieval, metadata-aware search, citation grounding, abstention, and evaluation. I have also worked on a claims workflow that separates document, fraud, coverage, and settlement stages with human review for exceptions. I’m interested in building secure, observable AI systems that integrate reliably with enterprise services.”</p>
+<div class="callout warn">Adjust “worked on,” “designed,” and “implemented” to match your actual ownership. Add your exact years only after reconciling the timeline in your resume. Do not memorize a claim you cannot support with implementation details.</div>
+<h3>STAR format for project questions</h3>
+<ol><li><b>Situation:</b> What business or technical problem existed?</li><li><b>Task:</b> What were you responsible for?</li><li><b>Action:</b> What architecture and implementation decisions did you make, and why?</li><li><b>Result:</b> What measurable result did you observe, on what dataset or workload, and what limitations remain?</li></ol>
+<h3>When you do not know a service</h3>
+<p>“I haven’t implemented that service hands-on yet. My understanding is that it is used for ____. In this architecture, I would consider it for ____. I would validate the integration, permissions, limits, and operational behavior with a small proof of concept before recommending it for production.”</p>
+<h3>When challenged on an architecture decision</h3>
+<p>“The main requirement was ____. I considered ____ and ____. I selected ____ because ____. The trade-off is ____. I would validate the decision using ____ metrics and revisit it if ____ changes.”</p>
+</section>
+
+<section class="card" id="plan">
+<h2>17. Study plan and readiness checklist</h2>
+<p>Use this as a 7-day intensive plan. If you have more time, repeat the mock-interview and project-deep-dive days with harder scenarios.</p>
+<table><tr><th>Day</th><th>Focus</th><th>Deliverable</th></tr>
+<tr><td>1</td><td>Bedrock, Agents, Knowledge Bases, Guardrails, model invocation</td><td>Explain the Bedrock ecosystem and draw a RAG architecture from memory.</td></tr>
+<tr><td>2</td><td>Strands, AgentCore, tool calling, MCP</td><td>Explain the agent loop, MCP roles, and tool security.</td></tr>
+<tr><td>3</td><td>Multi-agent patterns, LangGraph, HITL, retries, checkpointing</td><td>Draw and defend the insurance-claims workflow.</td></tr>
+<tr><td>4</td><td>RAG internals and evaluation</td><td>Explain chunking, hybrid retrieval, metrics, abstention, and your measured results.</td></tr>
+<tr><td>5</td><td>AWS integration, IAM, KMS, Step Functions, EventBridge</td><td>Design a secure, recoverable event-driven architecture.</td></tr>
+<tr><td>6</td><td>Project deep dives, SageMaker, Textract, Comprehend, Rekognition, Q</td><td>Deliver three project explanations and honest service-level answers.</td></tr>
+<tr><td>7</td><td>Mock interview, Python, system design, revision</td><td>Complete a timed mock and revise weak answers.</td></tr>
+</table>
+<h3>Self-assessment checklist</h3>
+<div id="checklist">
+<label><input type="checkbox"> I can explain Bedrock Agents, Knowledge Bases, Guardrails, and Action Groups.</label><br>
+<label><input type="checkbox"> I can distinguish Strands, AgentCore, and Bedrock Agents.</label><br>
+<label><input type="checkbox"> I can explain MCP host, client, server, tools, and resources.</label><br>
+<label><input type="checkbox"> I can draw a supervisor–worker multi-agent architecture.</label><br>
+<label><input type="checkbox"> I can explain LangGraph state, conditional edges, checkpoints, and HITL.</label><br>
+<label><input type="checkbox"> I can explain RAG chunking, embeddings, hybrid search, reranking, and citations.</label><br>
+<label><input type="checkbox"> I can explain Recall@K, Precision@K, MRR, faithfulness, and latency.</label><br>
+<label><input type="checkbox"> I can design safe tool calling with IAM, validation, idempotency, and audit logs.</label><br>
+<label><input type="checkbox"> I can choose between Lambda, Step Functions, EventBridge, and SQS.</label><br>
+<label><input type="checkbox"> I can explain KMS, encryption, tenant isolation, and prompt injection defenses.</label><br>
+<label><input type="checkbox"> I can deep-dive all three projects without exaggerating my ownership.</label><br>
+<label><input type="checkbox"> I can solve basic Python coding problems while explaining complexity.</label><br>
+</div>
+<p><b>Target:</b> You should be able to explain each critical topic in 60–90 seconds, draw the architecture in 3–5 minutes, and defend trade-offs with a real example.</p>
+</section>
+
+<section class="card">
+<h2>Final interview reminders</h2>
+<ul><li>Start with the business requirement, then explain the architecture.</li><li>For every agent, identify its goal, tools, permissions, state, and stopping condition.</li><li>For every AWS service, explain why it is present and what failure it handles.</li><li>Separate model reasoning from deterministic business logic.</li><li>Use numbers carefully: state the evaluation set and measurement method.</li><li>Never claim production scale, deployment, ownership, or a service integration that you cannot substantiate.</li><li>When discussing a design, mention security, failure handling, observability, cost, and latency—not only the happy path.</li></ul>
+<p class="muted">Technical note: AWS product names, feature sets, supported models, regional availability, quotas, and pricing change. Before the interview, verify current details in official AWS documentation, especially for AgentCore and Strands Agents.</p>
+</section>
+</main>
+</div>
+<footer>Prepared as a personal study workbook from the job requirements and resume details supplied in this conversation. This is an interview learning resource, not official AWS documentation.</footer>
+<script>
+const search=document.getElementById('search');
+search.addEventListener('input',()=>{
+ const q=search.value.trim().toLowerCase();
+ document.querySelectorAll('main section').forEach(section=>{
+   const text=section.innerText.toLowerCase();
+   section.style.display=(!q||text.includes(q))?'':'none';
+ });
+});
+</script>
+</body>
+</html>
